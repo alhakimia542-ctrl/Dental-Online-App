@@ -1,24 +1,29 @@
+## ✅ تم تحديث الروابط
+
+هذا هو الملف النهائي الكامل **مع الروابط الصحيحة**:
+
+```markdown
 # Dental Online App
 
-Dental Online App is a mobile application that uses artificial intelligence to analyze dental images and X-ray scans. The project combines a YOLOv8 model, a FastAPI backend, and a Flutter mobile application to provide a simple and accessible dental screening solution.
+Dental Online App is a mobile application that uses artificial intelligence to analyze dental images and X-rays. The project combines YOLOv8 model, FastAPI backend, and Flutter mobile app to provide a simple and easy solution for preliminary dental problem assessment.
 
 ---
 
 ## Project Overview
 
-The main goal of this project is to provide an initial analysis of dental conditions using computer vision and deep learning techniques. Users can capture or upload an image, send it to a cloud-based API, and receive analysis results directly on their mobile device.
+The main objective of this project is to provide initial analysis of dental conditions using computer vision and deep learning techniques. Users can take a photo or upload an image from their device, then send it to the cloud server to receive analysis results directly on their mobile phone.
 
-The system is designed as an educational and research project and demonstrates the integration of AI models with mobile applications.
+This system was developed as an educational and research project demonstrating how to integrate AI models with mobile applications.
 
 ---
 
 ## Project Objectives
 
-- Provide a fast preliminary assessment of dental conditions.
-- Demonstrate the use of AI in healthcare-related applications.
-- Create a complete system that combines AI, cloud services, and mobile development.
-- Offer a user-friendly interface for image analysis.
-- Build a foundation that can be extended with additional dental diagnostic features.
+- Provide quick initial assessment of dental conditions
+- Demonstrate the feasibility of using AI in healthcare applications
+- Build an integrated system combining AI, cloud services, and mobile development
+- Offer a simple and easy-to-use interface for image analysis
+- Create a foundation that can be extended with new features and diagnoses
 
 ---
 
@@ -26,11 +31,11 @@ The system is designed as an educational and research project and demonstrates t
 
 The system consists of three main components:
 
-- Flutter Mobile Application
-- FastAPI Backend API
-- YOLOv8 AI Model
+- A mobile application built with Flutter
+- A RESTful API built with FastAPI
+- A YOLOv8 AI model
 
-The mobile application sends dental images to the API. The backend processes the image using the trained YOLO model and returns the detection results to the user.
+The app sends dental images to the server, where the trained model analyzes the image and returns results to the user.
 
 ---
 
@@ -40,71 +45,80 @@ The mobile application sends dental images to the API. The backend processes the
 
 | Technology | Purpose |
 |------------|---------|
-| YOLOv8 | Object Detection Model |
-| Ultralytics | Model Training Framework |
-| Google Colab | Training Environment |
-| Roboflow / LabelImg | Data Annotation and Preparation |
+| YOLOv8 | Object detection model |
+| Ultralytics | Model training framework |
+| Google Colab | Training environment |
+| Roboflow / LabelImg | Data preparation and labeling |
 
 ### Backend API
 
 | Technology | Purpose |
 |------------|---------|
-| FastAPI | API Development |
-| Python 3.9 | Programming Language |
+| FastAPI | API development |
+| Python 3.9 | Programming language |
 | Docker | Containerization |
-| Uvicorn | API Server |
-| Hugging Face Spaces | Cloud Deployment |
+| Uvicorn | Server runtime |
+| Hugging Face Spaces | Cloud hosting |
 
 ### Mobile Application
 
 | Technology | Purpose |
 |------------|---------|
-| Flutter | Mobile App Development |
-| Dart | Application Logic |
-| image_picker | Image Selection |
-| http | API Requests |
-| flutter_spinkit | Loading Indicators |
+| Flutter | Mobile app development |
+| Dart | Application logic |
+| image_picker | Image selection |
+| http | HTTP requests |
+| flutter_spinkit | Loading indicators |
 
 ---
 
 ## Screenshots
 
-| Home Screen | Upload Image | Analysis Result |
-|:---:|:---:|:---:|
-| ![](assets/screenshots/home.png) | ![](assets/screenshots/upload.png) | ![](assets/screenshots/result.png) |
+| Welcome Screen | Upload Image | X-Ray Sample | Analysis Result |
+|:---:|:---:|:---:|:---:|
+| ![](assets/screenshots/welcome.png) | ![](assets/screenshots/upload.png) | ![](assets/screenshots/xray_sample.png) | ![](assets/screenshots/result.png) |
 
-> Place your screenshots inside:
+> Place screenshots inside the folder:
 >
 > `assets/screenshots/`
+
+### Screenshots Description
+
+| File Name | Description |
+|-----------|-------------|
+| `welcome.png` | Welcome screen with app logo and start button |
+| `upload.png` | Image selection screen (camera or gallery options) |
+| `xray_sample.png` | Sample X-ray image before analysis |
+| `result.png` | Analysis results with bounding boxes and confidence scores |
 
 ---
 
 ## AI Model Training
 
-### Dataset Preparation
+### Data Preparation
 
-The dataset consists of dental images and X-ray scans that were annotated using bounding boxes to identify different dental conditions.
+The dataset consists of dental images and X-rays labeled with bounding boxes to identify problem areas or various conditions.
 
-### Training Process
+### Training Steps
 
-1. Data collection and preparation.
-2. Image annotation using Roboflow or LabelImg.
-3. Transfer learning using pretrained YOLOv8 weights.
-4. Model training and validation.
-5. Exporting the best model as `best.pt`.
+1. Collect and prepare data
+2. Label images using Roboflow or LabelImg
+3. Apply Transfer Learning using pre-trained YOLOv8 weights
+4. Train and test the model
+5. Export the best model as `best.pt`
 
 ### Training Environment
 
 - Google Colab
-- GPU Acceleration
-- Ultralytics YOLOv8
+- GPU acceleration
+- Ultralytics YOLOv8 library
 
-### Model Output
+### Model Outputs
 
-The trained model generates:
+The model returns:
 
-- Detected dental conditions
-- Confidence scores
+- Detected problem type
+- Confidence score
 - Bounding box coordinates
 
 ---
@@ -113,7 +127,7 @@ The trained model generates:
 
 ### Endpoint
 
-```http
+```
 POST https://alhakimia54-dental-api-v2.hf.space/predict
 ```
 
@@ -123,7 +137,7 @@ POST https://alhakimia54-dental-api-v2.hf.space/predict
 - Content-Type: multipart/form-data
 - Parameter: file
 
-### Example Response
+### Response Example
 
 ```json
 {
@@ -140,9 +154,9 @@ POST https://alhakimia54-dental-api-v2.hf.space/predict
 }
 ```
 
-### Backend Structure
+### Server Structure
 
-```text
+```
 api/
 ├── main.py
 ├── requirements.txt
@@ -157,15 +171,15 @@ api/
 
 ### Features
 
-- Capture images using the camera.
-- Select images from the gallery.
-- Send images to the AI API.
-- Display analysis results.
-- Show confidence scores and detected regions.
+- Capture images using camera
+- Select images from gallery
+- Send images to AI model
+- Display analysis results
+- Show confidence scores and bounding boxes
 
-### Application Structure
+### App Structure
 
-```text
+```
 dental_online_app/
 │
 ├── lib/
@@ -193,7 +207,7 @@ dependencies:
 
 ## Project Structure
 
-```text
+```
 dental-project/
 │
 ├── api/
@@ -211,8 +225,9 @@ dental-project/
 │
 ├── assets/
 │   └── screenshots/
-│       ├── home.png
+│       ├── welcome.png
 │       ├── upload.png
+│       ├── xray_sample.png
 │       └── result.png
 │
 └── README.md
@@ -222,20 +237,20 @@ dental-project/
 
 ## How the System Works
 
-```text
+```
 1. User selects an image
           ↓
-2. Flutter app uploads the image
+2. App uploads the image
           ↓
-3. FastAPI receives the request
+3. Server receives the request
           ↓
-4. YOLO model processes the image
+4. YOLO model analyzes the image
           ↓
-5. Detection results are generated
+5. Results are extracted
           ↓
 6. Results are returned as JSON
           ↓
-7. Flutter displays the analysis
+7. App displays the analysis results
 ```
 
 ---
@@ -244,26 +259,26 @@ dental-project/
 
 ### Requirements
 
-#### Backend
+#### Server
 
-- Python 3.9+
+- Python 3.9 or higher
 - Git LFS
-- Hugging Face Account
+- Hugging Face account
 
-#### Mobile Application
+#### Mobile App
 
-- Flutter 3.0+
+- Flutter 3.0 or higher
 - Android Studio or Xcode
-- Android Device or Emulator
+- Android device or emulator
 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-repository/dental-project.git
-cd dental-project
+git clone https://github.com/alhakimia542-ctrl/Dental-Online-App.git
+cd Dental-Online-App
 ```
 
-### Run the Backend
+### Run the Server
 
 ```bash
 cd api
@@ -271,7 +286,7 @@ pip install -r requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 7860
 ```
 
-### Run the Flutter Application
+### Run the Mobile App
 
 ```bash
 cd dental_online_app
@@ -283,39 +298,52 @@ flutter run
 
 ## Future Improvements
 
-- Convert the model to ONNX format for faster inference.
-- Add offline inference using TensorFlow Lite.
-- Store previous scan history in a database.
-- Improve multilingual support.
-- Add user authentication.
-- Develop a dashboard for dentists.
-- Enable result sharing with healthcare professionals.
-- Expand support for additional dental conditions.
+- Convert model to ONNX format for faster inference
+- Add offline analysis support using TensorFlow Lite
+- Save previous examination results in a database
+- Improve multi-language support
+- Add user authentication system
+- Develop a dashboard for dentists
+- Enable result sharing with specialists
+- Support additional types of dental conditions
 
 ---
 
 ## Disclaimer
 
-This project was developed for educational and research purposes.
+This project was developed for educational and research purposes only.
 
-The analysis results provided by the AI model should not be considered a replacement for professional medical advice or diagnosis. Users should always consult a qualified dental professional for medical decisions and treatment.
+The results provided by the model are not a substitute for medical diagnosis or professional consultation. Always consult a qualified dentist for proper diagnosis and treatment.
 
 ---
 
 ## Contact
 
-**Ahmed Alhakimi**
+**Ahmed Al-Hakimi**
 
 LinkedIn:
-
 https://www.linkedin.com/in/احمد-الحكيمي-833380344
 
-Portfolio:
-
+Personal Website:
 https://sites.google.com/view/ahmed-alhakimi-tech
 
 ---
 
 ## License
 
-This project is available for educational and non-commercial use.
+This project is available for educational and non-commercial use only.
+```
+
+---
+
+## ✅ الروابط المحدثة
+
+| الرابط | الحالة |
+|--------|--------|
+| LinkedIn | ✅ `https://www.linkedin.com/in/احمد-الحكيمي-833380344` |
+| Personal Website | ✅ `https://sites.google.com/view/ahmed-alhakimi-tech` |
+| GitHub Repository | ✅ `https://github.com/alhakimia542-ctrl/Dental-Online-App.git` |
+
+---
+
+## 🚀 جاهز للنسخ واللصق مباشرة في GitHub
