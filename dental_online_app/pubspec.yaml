@@ -1,0 +1,45 @@
+name: dental_online_app
+description: "A professional online AI-powered dental X-ray analysis application using FastAPI backend."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # المكتبات الإضافية المخصصة للمشروع الأونلاين
+  cupertino_icons: ^1.0.6
+  
+  # 1. مكتبة اختيار الصور من الكاميرا أو معرض الصور
+  image_picker: ^1.1.2
+  
+  # 2. المكتبة الأساسية لإرسال الصورة إلى سيرفر Hugging Face واستقبال نتائج الـ API
+  http: ^1.2.0
+  
+  # 3. مكتبة لإظهار مؤشرات تحميل بصرية متحركة واحترافية أثناء فحص الصورة في السيرفر
+  flutter_spinkit: ^5.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  
+  # مكتبة توليد أيقونات التطبيق تلقائياً لأنظمة الأندرويد والآيفون
+  flutter_launcher_icons: ^0.13.1
+
+# إعدادات الأيقونة الجديدة (تم تعديل أندرويد إلى true لضمان الاستبدال المباشر)
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/online_logo.png"
+
+flutter:
+  uses-material-design: true
+
+  # تفعيل مجلد الأصول لكي يقرأ فلاتر صورة الأيقونة الجديدة
+  assets:
+    - assets/images/
