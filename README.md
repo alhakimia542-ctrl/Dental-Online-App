@@ -14,11 +14,11 @@ The system is designed as an educational and research project and demonstrates t
 
 ## Project Objectives
 
-- Provide a fast preliminary assessment of dental conditions.
-- Demonstrate the use of AI in healthcare-related applications.
-- Create a complete system that combines AI, cloud services, and mobile development.
-- Offer a user-friendly interface for image analysis.
-- Build a foundation that can be extended with additional dental diagnostic features.
+- Providing a rapid initial assessment of dental conditions.
+- Demonstrating the potential of artificial intelligence in healthcare applications.
+- Building an integrated system between artificial intelligence and cloud-based mobile applications.
+- Offering a user-friendly and simple interface for image analysis.
+- Establishing a foundation for future development, including new features and diagnostic capabilities.
 
 ---
 
@@ -73,9 +73,6 @@ The mobile application sends dental images to the API. The backend processes the
 |:---:|:---:|:---:|
 | ![](assets/screenshots/home.png) | ![](assets/screenshots/upload.png) | ![](assets/screenshots/result.png) |
 
-> Place your screenshots inside:
->
-> `assets/screenshots/`
 
 ---
 
